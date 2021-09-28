@@ -2,32 +2,39 @@
 @{
     Layout = null;
 }
-
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <h3> BTD Sözlük ~ Kategoriler</h3>
 <br />
-<table>
+<table class="table table-hover">
     <tr>
         <th>ID</th>
         <th>Adı</th>
         <th>Açıklama</th>
         <th>Durum</th>
+        <th>Güncelle</th>
     </tr>
     <tr>
         <td>1</td>
         <td>Anime/Manga</td>
         <td>Shounen, AMV, Solo Leveling, Demon Slayer, Hunter x Hunter...</td>
         <td>True</td>
+        <td><button class="btn btn-success">Güncelle</button></td>
     </tr>
     <tr>
         <td>2</td>
         <td>Dizi</td>
         <td>Friends, Doctor Who, The Walking Dead...</td>
         <td>True</td>
+        <td><button class="btn btn-success">Güncelle</button></td>
     </tr>
     <tr>
         <td>3</td>
         <td>Oyun</td>
         <td>Video oyunları, FPS, MMORPG, RPG, LoL...</td>
         <td>True</td>
+        <td><button class="btn btn-success">Güncelle</button></td>
     </tr>
 </table>
+<button class="btn btn-info">EKLE</button>
+<button class="btn btn-warning">Listele</button>
+<button class="btn btn-danger">Açıklamalar</button>
