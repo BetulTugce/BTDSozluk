@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace BTDSozluk.Controllers
     {
         // GET: Category
 
-        CategoryManager cm = new CategoryManager();
+        CategoryManager cm = new CategoryManager(new EfCategoryDal());
 
         public ActionResult Index()
         {
@@ -21,9 +22,8 @@ namespace BTDSozluk.Controllers
 
         public ActionResult GetCategoryList()
         {
-            //var categoryvalues = cm.GetAll();
-            //return View(categoryvalues);
-            return View();
+            var categoryvalues = cm.GetList();
+            return View(categoryvalues);
         }
 
         [HttpGet]
